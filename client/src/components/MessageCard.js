@@ -39,43 +39,50 @@ const MessageCard = ({it, onDelete}) => {
         <Wrapper>
             <div className="card">
                 <img src={it.image ? it.image : notFound} alt=""/>
-                <p>{it.author?.name}</p>
-                <hr/>
-                <div>
-                    {
-                        update
-                            ? <input
-                                value={updateText}
-                                onChange={(e) => handleInput(e)}
-                                type="text"
-                              />
-                            : <span className='d-inline-block px-3 overflow-auto'>
-                                   {it.message}
-                              </span>
-                    }
-                </div>
-                <hr/>
-                <div className='d-flex justify-content-between px-5'>
+                <div className="card_block">
+                    <p className='border-bottom'>Author: {it.author?.name}</p>
+                    <h5 className='text-center fw-bold'>Message:</h5>
                     <div>
                         {
                             update
-                                ? <button onClick={() => onUpdate(it._id)} className='green'>
-                                    <BsSaveFill />
-                                  </button>
-                                : <button onClick={onEdit}>
-                                    <AiFillEdit />
-                                  </button>
+                                ? <input
+                                    value={updateText}
+                                    onChange={(e) => handleInput(e)}
+                                    type="text"
+                                />
+                                : <span className='d-block px-3 overflow-auto text-center'>
+                                   {it.message}
+                                 </span>
                         }
                     </div>
-                    <div>
-                        {
-                            isAuth && (user._id === it.author?._id) &&
-                            (<button onClick={() => onDelete(it._id)} className='red'>
-                                <BsFillTrashFill />
-                            </button>)
-                        }
-                    </div>
+                    <hr/>
+                    <div className='d-flex justify-content-between px-5'>
+                        <div>
+                            {
+                                isAuth && (user._id === it.author?._id) &&
+                                <>
+                                    {
+                                        update
+                                            ? <button onClick={() => onUpdate(it._id)} className='green'>
+                                                <BsSaveFill/>
+                                            </button>
+                                            : <button onClick={onEdit}>
+                                                <AiFillEdit/>
+                                            </button>
+                                    }
+                                </>
+                            }
+                        </div>
+                        <div>
+                            {
+                                isAuth && (user._id === it.author?._id) &&
+                                (<button onClick={() => onDelete(it._id)} className='red'>
+                                    <BsFillTrashFill/>
+                                </button>)
+                            }
+                        </div>
 
+                    </div>
                 </div>
             </div>
         </Wrapper>

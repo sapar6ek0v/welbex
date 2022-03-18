@@ -7,5 +7,5 @@ export const singIn = (data) => {
 
 export const logOut = () => {
     Cookies.remove('token')
-    return {type: LOG_OUT}
+    return {type: LOG_OUT, user: null, token: null, isAuth: false}
 }

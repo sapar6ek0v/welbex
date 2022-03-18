@@ -19,9 +19,9 @@ const reducer = (state = initialState, action) => {
         case LOG_OUT:
             return {
                 ...state,
-                token: null,
-                user: null,
-                isAuth: false
+                token:  action.token,
+                user: action.user,
+                isAuth: action.isAuth
             }
         default : return state
     }

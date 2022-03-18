@@ -2,6 +2,8 @@ import React from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import axios from "axios";
+import Container from "./Container.js";
+import {Wrapper} from "./styles/SignIn.styled.js";
 
 const SignUp = () => {
     const {handleSubmit, register} = useForm()
@@ -18,30 +20,32 @@ const SignUp = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSignUp)} className='signup-form'>
-            <h3 className='signup-title'>Welcome!</h3>
+        <Container>
+            <Wrapper>
+                <form onSubmit={handleSubmit(onSignUp)} className='form'>
+                    <h3 className='text-center'>Welcome!</h3>
 
-            <div className="form-group mb-3">
-                <label className='signup-subtitle' htmlFor="name">Name</label>
-                <input {...register('name', {required: true})} type="text" className="form-control" id="name" aria-describedby="emailHelp"
-                       placeholder="Enter name"/>
-            </div>
-            <div className="form-group mb-3">
-                <label className='signup-subtitle' htmlFor="email">Email address</label>
-                <input {...register('email', {required: true})} type="email" className="form-control" id="email" aria-describedby="emailHelp"
-                       placeholder="Enter email"/>
-            </div>
-            <div className="form-group mb-3">
-                <label className='signup-subtitle' htmlFor="password">Password</label>
-                <input {...register('password', {required: true})} type="password" className="form-control" id="password" placeholder="Password"/>
-            </div>
-            <div className='text-center'>
-                <p className='text-end'>
-                    <Link  to='/sign_in'>Sign In</Link>
-                </p>
-                <button type="submit" className="signup-btn">Sign up</button>
-            </div>
-        </form>
+
+                    <label htmlFor="name">Name</label>
+                    <input {...register('name', {required: true})} type="text" id="name"
+                               placeholder="Enter name"/>
+
+                    <label htmlFor="email">Email address</label>
+                    <input {...register('email', {required: true})} type="email" id="email"
+                               placeholder="Enter email"/>
+
+                    <label htmlFor="password">Password</label>
+                    <input {...register('password', {required: true})} type="password" id="password" placeholder="Password"/>
+
+                    <div className='text-center'>
+                        <p className='text-end'>
+                            <Link  to='/sign_in'>Sign In</Link>
+                        </p>
+                        <button>Sign up</button>
+                    </div>
+                </form>
+            </Wrapper>
+        </Container>
     );
 };
 

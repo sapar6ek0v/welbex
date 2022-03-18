@@ -2,10 +2,9 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   width: 25%;
-  padding: 20px;
+  padding: 10px;
   
   .card {
-    padding: 25px;
     background: #2e312d;
     height: 100%;
     display: flex;
@@ -13,6 +12,10 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
+    border: none;
+    &_block {
+      padding: 25px;
+    }
   }
   
   p {
