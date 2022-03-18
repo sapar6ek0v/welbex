@@ -7,6 +7,7 @@
 ### `git clone https://github.com/sapar6ek0v/welbex.git`
 
 Скопируйте приложение в режиме разработки.\
+Чтобы все работало корректно создайте файл .env
 
 ### `npm run server`
 
