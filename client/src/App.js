@@ -10,6 +10,7 @@ import Main from "./components/Main.js";
 import {GlobalStyle, Wrapper} from "./App.styled.js";
 import Footer from "./components/Footer.js";
 import Header from "./components/Header.js";
+import AnonymousRoute from "./components/Anonymous.js";
 
 function App() {
     const dispatch = useDispatch()
@@ -30,8 +31,8 @@ function App() {
                     <Header/>
                     <Routes>
                         <Route path='/' element={<Main />} />
-                        <Route path='/sign_up' element={<SignUp/>}/>
-                        <Route path='/sign_in' element={<SignIn/>}/>
+                        <Route path='/sign_up' element={<AnonymousRoute><SignUp/></AnonymousRoute>}/>
+                        <Route path='/sign_in' element={<AnonymousRoute><SignIn/></AnonymousRoute>}/>
                         <Route path='/message' element={<Message />}/>
                     </Routes>
                 </div>
