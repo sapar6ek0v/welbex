@@ -1,30 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Этот проект был запущен с помощью [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Доступные скрипты
 
-In the project directory, you can copy it:
+В каталоге проекта вы можете скопировать его:
 
 ### `git clone https://github.com/sapar6ek0v/welbex.git`
 
-Copy the app in the development mode.\
+Скопируйте приложение в режиме разработки.\
 
 ### `npm run server`
 
-Runs the project.\
-Open [http://localhost:8000](http://localhost:8000) to view it in your browser.
+Запускает сервер.\
+Вы также можете увидеть любые ошибки в консоли.
+Откройте [http://localhost:8000](http://localhost:8000), чтобы просмотреть его в браузере.
 
 ### `npm run client`
 
-Runs the client.\
-You may also see any lint errors in the console.
+Запускает клиент.\
+Вы также можете увидеть любые ошибки в консоли.
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Откройте [http://localhost:3000](http://localhost:3000), чтобы просмотреть его в браузере.
+
 
 ### `npm run dev`
 
-Run the client and server.\
+Запускает клиент и сервер.\
+Страница будет перезагружена после внесения изменений.\
+Вы также можете увидеть любые ошибки в консоли.
+Чтобы редактировать или создать новое, вам нужно зарегистрироваться.\
+Вы не можете изменять и удалять чужие message. 
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+Откройте [http://localhost:3000](http://localhost:3000), чтобы просмотреть его в браузере.
