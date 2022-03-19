@@ -1,10 +1,12 @@
 import React from 'react';
+import {Wrapper} from "./styles/Footer.styled.js";
+
 
 const Footer = () => {
     return (
-        <div>
-            
-        </div>
+        <Wrapper>
+            Footer
+        </Wrapper>
     );
 };
 
